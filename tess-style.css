@@ -1,0 +1,50 @@
+
+
+article>.wp-block-query>.wp-block-post-template {
+    display: flex;
+    gap: 1rem;
+}
+
+article>.wp-block-query>.wp-block-post-template>a {
+    text-decoration: none;
+}
+
+.wp-block-post {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 1rem;
+    background-color: #c7c7c7;
+}
+
+article> .wp-block-post>.wp-block-columns {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.wp-post-image {
+
+    border-radius: 10px 10px 0px 0px;
+}
+
+.wp-block-post-featured-image {
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.wp-block-post-title {
+    padding-left: 1rem;
+}
+
+.wp-block-group {
+    padding: 1rem;
+}
+
+.wp-block-post-date {
+    visibility: hidden;
+}
