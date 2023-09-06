@@ -10,40 +10,7 @@ function mytheme_enqueue_styles()
 }
 
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
-
-function custom_post_type()
-{
-    $labels = array(
-        'name' => _x('Pricelist', 'post type general name'),
-        'singular_name' => _x('Price Item', 'post type singular name'),
-        'add_new' => __('Add New', 'book'),
-        'add_new_item' => __('Add New Price Item'),
-        'edit_item' => __('Edit Price Item'),
-        'new_item' => __('New Price Item'),
-        'all_items' => __('All Price Items'),
-        'view_item' => __('View Price Item'),
-        'search_items' => __('Search Price Item'),
-        'not_found' => __('No Price Item found'),
-        'not_found_in_trash' => __('No Price Item found in the Trash'),
-        'parent_item_colon' => '',
-        'menu_name' => 'Pricelist'
-    );
-
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'has_archive' => true,
-        'menu_position' => 5,
-        'supports' => array('title', 'custom-fields')
-    );
-
-    register_post_type('custom_post', $args);
-}
-
-add_action('init', 'custom_post_type');
-
 ?>
-
 <?php
 function theme_register_widget_areas()
 {
@@ -107,27 +74,6 @@ function theme_footer_contact_customizer_settings($wp_customize) {
 }
 
 add_action('customize_register', 'theme_footer_contact_customizer_settings');
-
-class Custom_Pricelist_Widget extends WP_Widget {
-    public function __construct() {
-        parent::__construct(
-            'custom_pricelist_widget',
-            'Custom Pricelist Widget',
-            array('description' => 'Displays the custom pricelist table.')
-        );
-    }
-
-    public function widget($args, $instance) {
-        
-        include(get_template_directory() . '/template-parts/pricelist.php');
-        
-    }
-}
-
-function register_custom_pricelist_widget() {
-    register_widget('Custom_Pricelist_Widget');
-}
-add_action('widgets_init', 'register_custom_pricelist_widget');
 
 function custom_theme_customize_register($wp_customize) {
     // Add a section for custom image
