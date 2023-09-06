@@ -2,11 +2,11 @@
 function mytheme_enqueue_styles()
 {
     wp_enqueue_style('style', get_stylesheet_uri());
-    wp_enqueue_style('hanna-style', get_template_directory_uri() . '/hannas-style.css');
+    wp_enqueue_style('post_list', get_template_directory_uri() . '/css/post_list.css');
 
-    wp_enqueue_style('tess-style', get_template_directory_uri() . '/tess-style.css');
-    wp_enqueue_style('aras-style', get_template_directory_uri() . '/aras-style.css');
-    wp_enqueue_style('june-style', get_template_directory_uri() . '/june-style.css');
+    wp_enqueue_style('query_loop', get_template_directory_uri() . '/css/query_loop.css');
+    wp_enqueue_style('header', get_template_directory_uri() . '/css/header.css');
+    wp_enqueue_style('footer', get_template_directory_uri() . '/css/footer.css');
 }
 
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');

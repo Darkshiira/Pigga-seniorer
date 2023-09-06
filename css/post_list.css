@@ -1,42 +1,5 @@
 
-
-body.page-template-default {
-    background-color: #454545;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-body.post-template-default {
-    background-color: #454545;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-body.post-template-default article {
-    background-color: #c7c7c7;
-    width: 90%;
-    text-align: center;
-}
-
-body.post-template-default article h2 {
-    font-size: 2rem;
-}
-
-body.page-template-default article {
-    background-color: #c7c7c7;
-    width: 90%;
-}
-
-body.page-template-default article h2 {
-    font-size: 2rem;
-    text-align: center;
-}
-
+/*latest-posts style*/
 .wp-block-latest-posts a {
     font-size: 1.5rem;
     color: white;
@@ -48,24 +11,6 @@ body.page-template-default article h2 {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 3rem;
-}
-
-body.page-template-default article {
-    background-color: #c7c7c7;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 1rem;
-    box-sizing: border-box
-}
-
-body.page-template-default article h2 {
-    font-size: 2rem;
-    text-align: center;
-}
-
-.wp-block-latest-posts a {
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
 }
 
 .wp-block-latest-posts {
@@ -85,29 +30,9 @@ body.page-template-default article h2 {
     max-width: 333px;
     min-width: 333px;
     overflow:hidden;
-
-    
 }
 
-body.home.blog{
-    background-color: #454545;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#homepage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #454545;
-    
-    
-}
-
-#main-feed{
-    
-    width: 90%;
-    background-color:#c7c7c7;
-}
+/*price list, pricelist styles*/
 
 #pricelist {
     background-color: rgb(252, 248, 248);
@@ -124,26 +49,22 @@ body.home.blog{
     font-size: 1.3rem;
 }
 
-
-
 #pricelist td {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1rem;
     padding: 1rem;
-
 }
 
 #pricelist tr {
-
     border-bottom: 0.1rem solid #454545;
 
-    &:last-child {
-        border-bottom: none;
-    }
-
-    
+}
+#pricelist tr:last-child {
+    border-bottom: none;
 }
 
+
+/*Booking calendar style*/
 #fbuilder {
     margin-left: 2rem;
 }
