@@ -98,5 +98,30 @@ function custom_theme_customize_register($wp_customize) {
 add_action('customize_register', 'custom_theme_customize_register');
 
 
+function add_default_widget_to_sidebar() {
+    if (is_active_sidebar('homepage-sidebar') && !is_dynamic_sidebar('homepage-sidebar')) {
+        
+        require_once(ABSPATH . 'wp-admin/includes/widgets.php');
+
+        
+        $widget = new WP_Widget_Recent_Posts();
+
+        
+        $widget_args = array(
+            'number' => 3,  // Adjust the number of posts to show as needed
+        );
+
+        
+        the_widget('WP_Widget_Recent_Posts', $widget_args, array(
+            'before_widget' => '<div class="widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ));
+    }
+}
+
+add_action('after_switch_theme', 'add_default_widget_to_sidebar');
+
 
 ?>
