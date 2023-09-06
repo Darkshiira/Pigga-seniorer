@@ -108,7 +108,7 @@ function add_default_widget_to_sidebar() {
 
         
         $widget_args = array(
-            'number' => 3,  // Adjust the number of posts to show as needed
+            'number' => 3, 
         );
 
         
