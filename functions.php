@@ -3,10 +3,11 @@ function mytheme_enqueue_styles()
 {
     wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('post_list', get_template_directory_uri() . '/css/post_list.css');
-
+    wp_enqueue_style('latestpost', get_template_directory_uri() . '/css/latestpost.css');
     wp_enqueue_style('query_loop', get_template_directory_uri() . '/css/query_loop.css');
     wp_enqueue_style('header', get_template_directory_uri() . '/css/header.css');
     wp_enqueue_style('footer', get_template_directory_uri() . '/css/footer.css');
+    
 }
 
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
@@ -97,31 +98,24 @@ function custom_theme_customize_register($wp_customize) {
 }
 add_action('customize_register', 'custom_theme_customize_register');
 
+function theme_customize_register_latest_post($wp_customize) {
+    $wp_customize->add_section('latest_posts_section', array(
+        'title' => 'Latest Posts Section',
+        'priority' => 30,
+    ));
 
-function add_default_widget_to_sidebar() {
-    if (is_active_sidebar('homepage-sidebar') && !is_dynamic_sidebar('homepage-sidebar')) {
-        
-        require_once(ABSPATH . 'wp-admin/includes/widgets.php');
+    $wp_customize->add_setting('show_latest_posts', array(
+        'default' => true,
+        'transport' => 'refresh',
+    ));
 
-        
-        $widget = new WP_Widget_Recent_Posts();
-
-        
-        $widget_args = array(
-            'number' => 3, 
-        );
-
-        
-        the_widget('WP_Widget_Recent_Posts', $widget_args, array(
-            'before_widget' => '<div class="widget">',
-            'after_widget' => '</div>',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>',
-        ));
-    }
+    $wp_customize->add_control('show_latest_posts', array(
+        'label' => 'Display Latest Posts Section',
+        'section' => 'latest_posts_section',
+        'type' => 'checkbox',
+    ));
 }
-
-add_action('after_switch_theme', 'add_default_widget_to_sidebar');
+add_action('customize_register', 'theme_customize_register_latest_post');
 
 
 ?>
