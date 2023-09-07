@@ -1,0 +1,26 @@
+.latest-posts ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 3rem;
+    justify-content: center;
+
+    >li {
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #2190E0 ;
+        color:white;
+        max-width: 250px;
+        min-width: 250px;
+        overflow:hidden;
+
+        >a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    
+}
