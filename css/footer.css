@@ -1,14 +1,11 @@
-
 footer {
   width: 100%;
-  background-color: #454545;
+  background-color: #2190e0;
   color: white;
+  position: absolute;
 }
 
 .footer-contact {
-  float: right;
-  margin-top: 20px;
-  margin-right: 40px;
-  margin-bottom: 20px;
-  text-align: left;
+  float: left;
+  padding: 40px;
 }
