@@ -4,6 +4,9 @@ get_header(); ?>
 <main id="main">
     <div id=homepage>
         <div id="main-feed">
+        <aside class="sidebar">
+                <?php dynamic_sidebar('homepage-sidebar'); ?>
+</aside>
 
         <?php
 $show_latest_posts = get_theme_mod('show_latest_posts', true);
@@ -32,6 +35,7 @@ if ($show_latest_posts) :
     </ul>
 </div>
 <?php endif ?>
+
 
 </div>
         </div>
