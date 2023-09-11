@@ -73,3 +73,44 @@ footer {
   float: left;
   padding: 40px;
 }
+
+.latest-posts ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 3rem;
+  justify-content: center;
+
+  > li {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #2190e0;
+    color: white;
+    max-width: 250px;
+    min-width: 250px;
+    overflow: hidden;
+
+    > a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.latest-posts {
+  text-align: center;
+}
+
+#view-more-posts {
+  background-color: black;
+  color: #fff;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 3rem;
+}
