@@ -10,8 +10,10 @@
 
 <body <?php body_class(); ?>>
 	<header>
-		<div class="navbar">
+		<div class="title">
 			<a href="../"><h1><?= get_bloginfo('name') ?></h1></a>
+		</div>
+		<div class="navbar">
 			<nav>
 				<?php
 				wp_nav_menu(array(
@@ -22,12 +24,4 @@
 			</nav>
 		</div>
 		
-		<div id="hero">
-			<?php
-				$custom_image_url = get_theme_mod('custom_image_setting');
-				if ($custom_image_url) {
-					echo '<img src="' . esc_url($custom_image_url) . '" alt="Custom Image">';
-				}
-			?>
-		</div>
 	</header>

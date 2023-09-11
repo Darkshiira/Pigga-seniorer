@@ -1,65 +1,327 @@
 /*
-Theme Name: pigga seniorer
+Theme Name: Pigga Seniorer
 Author: Hanna, Araceli, Fosiya, June and Terese.
 Version: 1.0
 
 */
-/*generic page styles*/
-body.page-template-default {
-    background-color: #454545;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: calc(100vw - (100vw - 100%));
+  min-height: 100vh;
+  position: relative;
 }
 
-body.page-template-default article {
-    background-color: #c7c7c7;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* ----- Header */
+
+header {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.title {
+  background: #2190e0;
+  height: 70px;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.title h1 {
+  line-height: 70px;
+  margin-left: 30px;
+}
+
+.navbar {
+  background: #219ce0;
+  height: 40px;
+  margin-top: -20px;
+}
+
+header nav {
+  padding-right: 30px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+
+header li {
+  padding-left: 30px;
+}
+
+/* ----- Footer */
+
+footer {
+  width: 100%;
+  background-color: #2190e0;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  height: 150px;
+}
+
+.footer-contact {
+  float: left;
+  padding: 40px;
+}
+
+/* ----- Latest Posts */
+
+.latest-posts ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 3rem;
+  justify-content: center;
+
+  > li {
+    margin: 1rem;
     padding: 1rem;
-    box-sizing: border-box;
-    width: 90%;
+    background-color: #2190e0;
+    color: white;
+    max-width: 250px;
+    min-width: 250px;
+    overflow: hidden;
+
+    > a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
-body.page-template-default article h2 {
-    font-size: 2rem;
-    text-align: center;
+.latest-posts {
+  text-align: center;
 }
 
-/* specific named page styles*/
-body.home.blog{
-    background-color: #454545;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#view-more-posts {
+  background-color: #219ce0;
+  color: #fff;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 3rem;
+}
+
+.wp-block-latest-posts a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.wp-block-latest-posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 3rem;
+}
+
+.wp-block-latest-posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 3rem;
+  justify-content: center;
+}
+
+.wp-block-latest-posts li {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  background-color: #fff;
+  color: white;
+  max-width: 333px;
+  min-width: 333px;
+  overflow: hidden;
+}
+
+/* ----- Booking Calendar */
+
+#fbuilder {
+  margin-left: 2rem;
+}
+#fbuilder .ahbfield_service {
+  padding-left: 2rem;
+  width: 50%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(252, 248, 248);
+}
+
+#fbuilder input {
+  width: 50%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(252, 248, 248);
+}
+
+#fbuilder label {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+#fbuilder .captcha {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#fbuilder #fieldname2_1 {
+  align-items: left;
+  width: auto;
+  font-size: 1rem;
+}
+
+#fbuilder .pbreak .pbPrevious,
+#fbuilder .pbreak .pbNext,
+#fbuilder .pbSubmit {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: black !important;
+  color: white !important;
+}
+
+article > .wp-block-query > .wp-block-post-template {
+  display: flex;
+  gap: 1rem;
+}
+
+article > .wp-block-query > .wp-block-post-template > a {
+  text-decoration: none;
+}
+
+.wp-block-post {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
+  border-radius: 10px;
+  margin: 1rem;
+  background-color: #fff;
+}
+
+article > .wp-block-post > .wp-block-columns {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.wp-post-image {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.wp-block-post-featured-image {
+  overflow: hidden;
+  overflow: hidden;
+}
+
+.wp-block-post-title {
+  padding-left: 1rem;
+}
+
+.wp-block-group {
+  padding: 1rem;
+}
+
+.wp-block-post-date {
+  visibility: hidden;
+}
+
+/* ----- Page Template */
+
+.page-template-default {
+  background-color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-template-default article {
+  margin-top: 150px;
+  background-color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 90%;
+}
+
+.page-template-default article h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ----- Named Page */
+
+.home.blog {
+  background-color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 #homepage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #454545;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
 }
 
-#main-feed{
-    width: 90%;
-    background-color:#c7c7c7;
+#main-feed {
+  margin-top: 110px;
+  width: 90%;
+  background-color: #fff;
 }
 
-/*single? styles*/
-body.post-template-default {
-    background-color: #454545;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ----- Single Post */
+
+.post-template-default {
+  background-color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-body.post-template-default article {
-    background-color: #c7c7c7;
-    width: 90%;
-    text-align: center;
+.post-template-default article {
+  margin: 150px 0 200px 0;
+  padding-bottom: 50px;
+  background-color: #fff;
+  width: 90%;
+  text-align: center;
 }
 
-body.post-template-default article h2 {
-    font-size: 2rem;
+.post-template-default article h2 {
+  font-size: 2rem;
+}
+
+.post-template-default img {
+  max-width: 500px;
 }
