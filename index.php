@@ -71,7 +71,7 @@ $latest_posts = new WP_Query(array(
 </div>
         </div>
     </div>
-</main>
+
 
 
 <?php get_footer(); ?>

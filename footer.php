@@ -1,4 +1,4 @@
-
+</main>
 <footer>
     
     <div class="footer-contact">
@@ -12,5 +12,6 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=uZldeRBU"></script>
 </body>
 </html>
