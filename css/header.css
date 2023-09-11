@@ -114,3 +114,89 @@ footer {
   font-size: 1.2em;
   margin-bottom: 3rem;
 }
+
+/*latest-posts style*/
+.wp-block-latest-posts a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.wp-block-latest-posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 3rem;
+}
+
+.wp-block-latest-posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 3rem;
+  justify-content: center;
+}
+
+.wp-block-latest-posts li {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  background-color: #fff;
+  color: white;
+  max-width: 333px;
+  min-width: 333px;
+  overflow: hidden;
+}
+
+/*Booking calendar style*/
+#fbuilder {
+  margin-left: 2rem;
+}
+#fbuilder .ahbfield_service {
+  padding-left: 2rem;
+  width: 50%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(252, 248, 248);
+}
+
+#fbuilder input {
+  width: 50%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(252, 248, 248);
+}
+
+#fbuilder label {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+#fbuilder .captcha {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#fbuilder #fieldname2_1 {
+  align-items: left;
+  width: auto;
+  font-size: 1rem;
+}
+
+#fbuilder .pbreak .pbPrevious,
+#fbuilder .pbreak .pbNext,
+#fbuilder .pbSubmit {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: black !important;
+  color: white !important;
+}
