@@ -1,9 +1,5 @@
 <?php get_header();
 
-?><aside class="sidebar">
-                <?php dynamic_sidebar('homepage-sidebar'); ?>
-</aside>
-<?php
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();
