@@ -24,3 +24,20 @@
 
     
 }
+
+.latest-posts {
+    text-align: center;
+}
+
+#view-more-posts {
+    background-color: black;
+    color: #fff;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 3rem;
+
+}
